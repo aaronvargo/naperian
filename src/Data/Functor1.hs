@@ -10,12 +10,12 @@ import           Data.Type.Coercion
 -- | Objects in the category @(Hask -> Hask) -> Hask@
 class Functor1 w where
   -- | @
-  -- map1 f . map1 g = map1 (f . g)
-  -- map1 id = id
+  -- 'map1' f . 'map1' g = 'map1' (f . g)
+  -- 'map1' id = id
   -- @
   map1 :: (forall a. f a -> g a) -> w f -> w g
 
-  -- | mapCoerce1 c = map1 (coerceWith c)
+  -- | @'mapCoerce1' c = 'map1' ('coerceWith' c)@
   mapCoerce1 :: (forall x. Coercion (f x) (g x)) -> w f -> w g
   mapCoerce1 f = map1 (coerceWith f)
 
