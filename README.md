@@ -1,5 +1,7 @@
 # naperian
 
+[![Hackage](https://img.shields.io/hackage/v/naperian.svg)](https://hackage.haskell.org/package/naperian)
+
 This package provides `Naperian` functors, a more powerful form of
 `Distributive` functor which is equal in power to a `Representable` functor (for
 some `Rep`), but which can be implemented asymptotically more efficiently for
